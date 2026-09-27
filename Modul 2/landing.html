@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ETALASE - Beranda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar-wrapper">
+  <div class="navbar-topbar">
+    <span class="greeting" id="greeting">Halo, ...</span>
+    <button class="logout-btn" id="logoutBtn">Keluar</button>
+  </div>
+
+  <div class="navbar-main">
+    <div class="navbar-side"></div>
+    <a href="landing.html" class="logo">ETALASE</a>
+    <div class="navbar-side navbar-side-right">
+      <div class="cart-icon-wrapper" id="cartIcon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+        <span class="cart-badge" id="cartBadge">0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-links-row">
+    <a href="landing.html">Beranda</a>
+    <a href="index.html">Produk Kami</a>
+    <a href="#best-seller">Best Seller</a>
+    <a href="#tentang">Tentang Kami</a>
+    <a href="#kontak">Kontak</a>
+  </div>
+</nav>
+
+  <section class="landing-hero">
+    <div class="landing-hero-text">
+      <h1 class="landing-hero-title">The Art of Fine Living</span></h1>
+      <p class="landing-hero-desc">Temukan ribuan produk pilihan dengan harga terbaik. Belanja mudah, aman, dan cepat sampai.</p>
+      <div class="landing-hero-buttons">
+  <a href="index.html" class="hero-btn-outline">Belanja Sekarang</a>
+</div>
+    </div>
+    <div class="landing-hero-image">
+  <div class="hero-slideshow" id="heroSlideshow">
+    <div class="hero-slide active">
+      <img src="https://picsum.photos/seed/product1/800/900" alt="Produk 1">
+    </div>
+    <div class="hero-slide">
+      <img src="https://picsum.photos/seed/product2/800/900" alt="Produk 2">
+    </div>
+    <div class="hero-slide">
+      <img src="https://picsum.photos/seed/product3/800/900" alt="Produk 3">
+    </div>
+    <div class="hero-slide">
+      <img src="https://picsum.photos/seed/product4/800/900" alt="Produk 4">
+    </div>
+
+    <button class="slide-arrow slide-arrow-left" id="slidePrev" aria-label="Sebelumnya">‹</button>
+    <button class="slide-arrow slide-arrow-right" id="slideNext" aria-label="Selanjutnya">›</button>
+
+    <div class="slide-dots" id="slideDots"></div>
+  </div>
+</div>
+  </section>
+
+  <section class="trust-bar">
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+    Garansi Uang Kembali
+  </div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+    Pembayaran Aman
+  </div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+    Pengiriman Cepat
+  </div>
+  <div class="trust-item">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+    Dukungan 24/7
+  </div>
+</section>
+
+  <section id="best-seller" class="featured-section">
+  <div class="section-heading-row">
+    <h2 class="section-title">Produk Unggulan</h2>
+    <a href="index.html" class="view-all-link">Lihat Semua Produk</a>
+  </div>
+  <div id="globalErrorLanding" class="global-error" hidden></div>
+  <div class="product-grid" id="featuredGrid"></div>
+</section>
+
+  <section id="tentang" class="about-section">
+    <h2 class="section-title">Kenapa Belanja di ETALASE?</h2>
+    <div class="about-grid">
+      <div class="about-card">
+  <span class="about-icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+  </span>
+  <h3>Produk Lengkap</h3>
+  <p>Ribuan pilihan produk dari berbagai kategori kebutuhan harian.</p>
+</div>
+<div class="about-card">
+  <span class="about-icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+  </span>
+  <h3>Cepat & Praktis</h3>
+  <p>Cari, filter, dan checkout dalam hitungan menit tanpa ribet.</p>
+</div>
+<div class="about-card">
+  <span class="about-icon">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+  </span>
+  <h3>Aman Terpercaya</h3>
+  <p>Transaksi dan data pribadimu selalu kami lindungi dengan baik.</p>
+</div>
+    </div>
+  </section>
+
+  <section class="review-section">
+    <h2 class="section-title">Apa Kata Mereka</h2>
+    <div class="review-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Barangnya sesuai foto, pengiriman cepat banget. Bakal belanja lagi di sini!"</p>
+        <p class="review-author">— Dinda P.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Harga bersaing dan fitur pencariannya gampang banget nemuin barang yang aku mau."</p>
+        <p class="review-author">— Rafi A.</p>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★☆</div>
+        <p class="review-text">"Tampilan websitenya rapi, checkout-nya juga simpel. Recommended!"</p>
+        <p class="review-author">— Salsa M.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="kontak" class="landing-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h3 class="footer-logo">ETALASE</h3>
+      <p>Belanja kebutuhanmu, secukupnya dan secepatnya.</p>
+      <div class="footer-socials">
+        <a href="https://instagram.com/aulinsn" target="_blank" rel="noopener noreferrer" aria-label="Instagram ETALASE">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        </a>
+        <a href="https://facebook.com/facebook.id" target="_blank" rel="noopener noreferrer" aria-label="Facebook ETALASE">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+        </a>
+        <a href="https://tiktok.com/@thegurlwholived" target="_blank" rel="noopener noreferrer" aria-label="TikTok ETALASE">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.82s.51.5 0 0A4.278 4.278 0 0 1 15.54 3h-3.09v12.4a2.592 2.592 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Belanja</h4>
+      <a href="index.html">Semua Produk</a>
+      <a href="index.html#katalog">Best Seller</a>
+    </div>
+    <div class="footer-col">
+      <h4>Perusahaan</h4>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#kontak">Kontak</a>
+    </div>
+    <div class="footer-col">
+      <h4>Hubungi Kami</h4>
+      <p class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        +62 812-0000-0000
+      </p>
+      <p class="footer-contact-item">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+        halo@etalase.id
+      </p>
+    </div>
+  </div>
+  <p class="footer-copy">© 2026 ETALASE — Tugas Praktikum Modul 2.</p>
+</footer>
+
+  <script src="landing.js" defer></script>
+</body>
+</html>
