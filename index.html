@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Modul 2</title>
+    <link rel="stylesheet" href="index.css"> 
+
+    <!-- ngikutin tree dari prompt Nina -->
+    <script src="js/app.js" defer></script>
+    <script src="js/search.js" defer></script>
+    <script src="js/cart.js" defer></script> 
+    <script src="js/modal.js" defer></script>
+</head>
+<body>
+
+  <!-- navbar -->
+  <header class="navbar">
+    <div class="logo">Mini Shopee</div>
+    <div id="user-greeting">Halo, User!</div>
+  </header>
+
+  <main class="container">
+    <!-- control bar (seacth, filter, sort) -->
+    <section class="controls-section">
+      <div class="search-box">
+        <input 
+          type="text" 
+          id="search-input" 
+          placeholder="Cari produk atau kategori..."
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="filter-box">
+        <!-- filter -->
+        <select id="category-filter">
+          <option value="all">Semua Kategori</option>
+        </select>
+
+        <!-- sorting -->
+        <select id="sort-select">
+          <option value="default">Urutkan Berdasarkan</option>
+          <option value="price-low">Harga: Termurah</option>
+          <option value="price-high">Harga: Termahal</option>
+          <option value="rating-high">Rating: Tertinggi</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- card product -->
+    <section class="catalog-section">
+      <div id="product-grid" class="product-grid">
+      </div>
+
+      <!-- load more button-->
+      <div class="load-more-container">
+        <button id="load-more-btn" class="btn-load-more" style="display: none;">
+          Load More
+        </button>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+</html>
