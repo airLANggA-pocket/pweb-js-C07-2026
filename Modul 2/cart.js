@@ -9,7 +9,7 @@ document.getElementById('greeting').textContent = `Halo, ${firstName}`;
 document.getElementById('logoutBtn').addEventListener('click', () => {
   localStorage.removeItem('firstName');
   localStorage.removeItem('userId');
-  localStorage.removeItem('cart');
+  // localStorage.removeItem('cart'); =====REV=====
   window.location.href = 'login.html';
 });
 
@@ -39,6 +39,22 @@ function addToCart(productId) {
   }
 
   saveCart(cart);
+}
+
+// =====REV=====
+// tiap user punya cart sendiri 
+function getCartKey() {
+  const userId = localStorage.getItem('userId') || 'guest';
+  return `cart_${userId}`;
+}
+
+function getCart() {
+  return JSON.parse(localStorage.getItem(getCartKey())) || [];
+}
+
+function saveCart(cart) {
+  localStorage.setItem(getCartKey(), JSON.stringify(cart));
+  updateCartUI();
 }
 
 function increaseQty(productId) {

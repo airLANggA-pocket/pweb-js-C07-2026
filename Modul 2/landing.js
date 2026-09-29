@@ -8,7 +8,7 @@ document.getElementById('greeting').textContent = `Halo, ${firstName}`;
 document.getElementById('logoutBtn').addEventListener('click', () => {
   localStorage.removeItem('firstName');
   localStorage.removeItem('userId');
-  localStorage.removeItem('cart');
+  // localStorage.removeItem('cart'); =====REV=====
   window.location.href = 'login.html';
 });
 

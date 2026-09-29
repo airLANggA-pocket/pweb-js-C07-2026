@@ -27,7 +27,7 @@ function hideError() {
 togglePassword.addEventListener('click', () => {
   const isHidden = passwordInput.type === 'password';
   passwordInput.type = isHidden ? 'text' : 'password';
-  togglePassword.textContent = isHidden ? '🙈' : '👁';
+  togglePassword.textContent = isHidden ? '◡' : '◉';
 });
 
 // Kalau sudah login, langsung ke landing page
@@ -49,21 +49,22 @@ loginForm.addEventListener('submit', async (e) => {
 
   setLoading(true);
 
+  // =====REV=====
   try {
-    const res = await fetch(LOGIN_API);
-
-    if (!res.ok) {
-      throw new Error('Gagal terhubung ke server. Coba lagi nanti.');
-    }
-
-    const data = await res.json();
-    const users = data.users;
-
-    const matchedUser = users.find(
-      (user) =>
-        user.username.toLowerCase() === username.toLowerCase() &&
-        user.password === password
+    const localUsers = JSON.parse(localStorage.getItem('custom_users')) || [];
+    let matchedUser = localUsers.find(
+      (u) => u.username.toLowerCase() === username.toLowerCase() && u.password === password
     );
+  
+    if (!matchedUser) {
+      const res = await fetch(LOGIN_API);
+      if (res.ok) {
+        const data = await res.json();
+        matchedUser = data.users.find(
+          (u) => u.username.toLowerCase() === username.toLowerCase() && u.password === password
+        );
+      }
+    }
 
     if (!matchedUser) {
       throw new Error('Username atau password salah.');

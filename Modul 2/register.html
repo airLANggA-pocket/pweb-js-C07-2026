@@ -1,0 +1,42 @@
+<!-- =====REV===== -->
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-illustration">
+        <img src="foto/logincardpic.jpg" alt="Ilustrasi ETALASE">
+      </div>
+      <div class="login-form-side">
+        <p class="register-link">Sudah punya akun? <a href="login.html">Masuk di sini</a></p>
+        <h1 class="login-title">Daftar Akun</h1>
+        <p class="login-subtitle">Buat akun untuk mulai berbelanja!</p>
+
+        <form id="registerForm" class="login-form" novalidate>
+          <div class="form-group">
+            <input type="text" id="regFirstName" name="firstName" placeholder="Nama Depan" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="regUsername" name="username" placeholder="Username" autocomplete="username" required>
+          </div>
+          <div class="form-group password-group">
+            <input type="password" id="regPassword" name="password" placeholder="Password" autocomplete="new-password" required>
+          </div>
+          <div id="regErrorMessage" class="error-message" hidden></div>
+          <button type="submit" id="regBtn" class="btn-primary">
+            <span>Daftar Sekarang</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="register.js" defer></script>
+</body>
+</html>

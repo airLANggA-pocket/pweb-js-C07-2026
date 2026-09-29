@@ -16,9 +16,9 @@ function showGlobalError(message) {
   globalError.hidden = false;
 }
 
-function formatPrice(usd) {
-  return 'Rp' + Math.round(usd * 15000).toLocaleString('id-ID');
-}
+// function formatPrice(usd) {
+//   return 'Rp' + Math.round(usd * 15000).toLocaleString('id-ID');
+// }
 
 function createProductCard(product) {
   const card = document.createElement('div');
@@ -31,7 +31,7 @@ function createProductCard(product) {
       <span class="product-category">${product.category}</span>
       <span class="product-name">${product.title}</span>
       <div class="product-price-row">
-        <span class="product-price">${formatPrice(product.price)}</span>
+        <span class="product-price">${(product.price)}</span>
         ${product.discountPercentage ? `<span class="product-discount">-${Math.round(product.discountPercentage)}%</span>` : ''}
       </div>
       <span class="product-rating">★ ${product.rating}</span>
